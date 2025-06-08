@@ -1,0 +1,6 @@
+- 🟩 AWS Lambda (Python) – for backend logic
+- 🟨 API Gateway – for REST APIs
+- 🟦 DynamoDB Global Tables – for multi-region database
+- 🟥 Route 53 – for health check and failover
+- 🟪 S3 – for hosting frontend (HTML+JS)
+- 🔐 IAM Roles – for secure Lambda access
