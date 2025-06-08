@@ -11,6 +11,6 @@
 User → S3-hosted frontend → API Gateway → Lambda → DynamoDB (replicated)  
 ↳ If Region A fails, Route 53 sends traffic to Region B automatically.
 
--
+--
 
 ![Architecture Diagram](https://github.com/user-attachments/assets/d76940fb-bbac-4d6b-8a9f-2a343959a482)
