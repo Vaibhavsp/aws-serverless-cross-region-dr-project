@@ -1,4 +1,4 @@
-![0  Architecture Diagram](https://github.com/user-attachments/assets/cc1563f3-75ce-4240-abda-a11e7c6c5fff)# ☁️ AWS Serverless Cross-Region Disaster Recovery Project (with Frontend)
+# ☁️ AWS Serverless Cross-Region Disaster Recovery Project (with Frontend)
 
 This project is a **real-world cloud architecture** that demonstrates how to build a **highly available, serverless, cross-region disaster recovery system** using AWS.
 
@@ -35,7 +35,7 @@ This project is a **real-world cloud architecture** that demonstrates how to bui
 User → S3-hosted frontend → API Gateway → Lambda → DynamoDB (replicated)
 ↳ If Region A fails, Route 53 sends traffic to Region B automatically.
 
-![Architecture Diagram](screenshots/0.Architecture-Diagram.png)
+![0  Architecture Diagram](https://github.com/user-attachments/assets/433155af-6d5c-41fb-aa2c-9d8b6f0004bb)
 
 ---
 
@@ -66,13 +66,13 @@ This guide walks you through building the entire project from scratch using **AW
 * Table name: `HighAvailabilityTable`
 * Partition Key: `ItemId` (String)
 
-![Step 1](screenshots/01-dynamodb-create-table.png)
+![Step 1](https://github.com/user-attachments/assets/d39af8bb-0ab8-4910-be55-1e2be25be25c)
 
 ### 🼀 Step 2: Enable Global Table (Add Replica Region)
 
 * Actions → Manage Global Tables → Add Region → Choose `ap-northeast-1`
 
-![Step 2](screenshots/02-global-table.png)
+![Step 2](https://github.com/user-attachments/assets/907643d8-56ee-42d8-a9bb-eedf98c9675f)
 
 ### 🼀 Step 3: Create IAM Role for Lambda
 
@@ -82,7 +82,7 @@ This guide walks you through building the entire project from scratch using **AW
   * `AWSLambdaBasicExecutionRole`
   * `AmazonDynamoDBFullAccess`
 
-![Step 3](screenshots/03-iam-role.png)
+![10  Role Created](https://github.com/user-attachments/assets/87607286-79f9-4945-8cdf-9f2c32094290)
 
 ### 🼁 Step 4: Write Lambda Functions (read & write)
 
@@ -91,7 +91,7 @@ This guide walks you through building the entire project from scratch using **AW
 
 Find python scripts for lambda in `/python-scripts/`
 
-![Step 4](screenshots/04-lambda-write.png)
+![Step 4](https://github.com/user-attachments/assets/016637f7-bb77-4dff-80e6-9e78ab02d337)
 
 ### 🼁 Step 5: Setup API Gateway
 
@@ -99,7 +99,8 @@ Find python scripts for lambda in `/python-scripts/`
 * Add `/read` (GET) and `/write` (POST) resources
 * Integrate each with respective Lambda
 
-![Step 5](screenshots/05-api-read-method.png)
+![Step 5](https://github.com/user-attachments/assets/368e2be0-bf63-42d5-bdd9-376b68216014)
+
 
 ### 🼁 Step 6: Enable CORS and Deploy API
 
