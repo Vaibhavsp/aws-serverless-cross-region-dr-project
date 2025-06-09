@@ -60,7 +60,7 @@ This guide walks you through building the entire project from scratch using **AW
 
 > 📸 I’ve included 55+ screenshots inside the `/screenshots` folder to make every step crystal clear.
 
-### [ ] Step 1: Create DynamoDB Table
+### 🟩 Step 1: Create DynamoDB Table
 
 * Go to DynamoDB in AWS Console → Create table
 * Table name: `HighAvailabilityTable`
@@ -68,13 +68,13 @@ This guide walks you through building the entire project from scratch using **AW
 
 ![Step 1](https://github.com/user-attachments/assets/d39af8bb-0ab8-4910-be55-1e2be25be25c)
 
-### [] Step 2: Enable Global Table (Add Replica Region)
+### 🟩 Step 2: Enable Global Table (Add Replica Region)
 
 * Actions → Manage Global Tables → Add Region → Choose `ap-northeast-1`
 
 ![Step 2](https://github.com/user-attachments/assets/907643d8-56ee-42d8-a9bb-eedf98c9675f)
 
-### [] Step 3: Create IAM Role for Lambda
+### 🟩 Step 3: Create IAM Role for Lambda
 
 * Go to IAM → Create Role → Choose Lambda
 * Attach:
@@ -84,7 +84,7 @@ This guide walks you through building the entire project from scratch using **AW
 
 ![10  Role Created](https://github.com/user-attachments/assets/87607286-79f9-4945-8cdf-9f2c32094290)
 
-### [] Step 4: Write Lambda Functions (read & write)
+### 🟩 Step 4: Write Lambda Functions (read & write)
 
 * Create two Lambda functions (`ReadFunction`, `WriteFunction`)
 * Use `read_function.py` and `write_function.py` from `/lambda` folder
@@ -93,7 +93,7 @@ Find python scripts for lambda in `/python-scripts/`
 
 ![Step 4](https://github.com/user-attachments/assets/016637f7-bb77-4dff-80e6-9e78ab02d337)
 
-### [] Step 5: Setup API Gateway
+### 🟩 Step 5: Setup API Gateway
 
 * Create a REST API
 * Add `/read` (GET) and `/write` (POST) resources
@@ -102,7 +102,7 @@ Find python scripts for lambda in `/python-scripts/`
 ![Step 5](https://github.com/user-attachments/assets/368e2be0-bf63-42d5-bdd9-376b68216014)
 
 
-### [] Step 6: Enable CORS and Deploy API
+### 🟩 Step 6: Enable CORS and Deploy API
 
 * Enable CORS for both endpoints
 * Deploy to a stage called `prod`
@@ -110,11 +110,11 @@ Find python scripts for lambda in `/python-scripts/`
 
 ![Step 6](https://github.com/user-attachments/assets/ae930c04-ad3a-4e45-a568-c618f723fc69)
 
-### [] Step 7: Repeat Lambda + API in Second Region
+### 🟩 Step 7: Repeat Lambda + API in Second Region
 
 * Repeat steps 4–6 in `ap-northeast-1` region
 
-### [] Step 8: Create Route 53 Hosted Zone + Health Checks
+### 🟩 Step 8: Create Route 53 Hosted Zone + Health Checks
 
 * Create Hosted Zone (like `vaibhav-lab.com`)
 * Add 2 Health Checks pointing to `/read` endpoints
@@ -123,14 +123,14 @@ Find python scripts for lambda in `/python-scripts/`
 
 ![Step 8](https://github.com/user-attachments/assets/d9bdada2-11dd-436e-87d7-a582ecbb66a2)
 
-### [] Step 9: Create Failover DNS Records
+### 🟩 Step 9: Create Failover DNS Records
 
 * Use routing policy = Failover
 * Primary → primary API Gateway URL
 * Secondary → secondary API Gateway URL
 * Attach correct health checks
 
-### [] Step 10: Build Frontend
+### 🟩 Step 10: Build Frontend
 
 * Use `frontend/index.html`
 * Replace the API URL in JavaScript
