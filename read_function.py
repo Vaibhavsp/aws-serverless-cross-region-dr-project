@@ -1,6 +1,5 @@
 # 🟢 1. read_function.py – For Reading Data from DynamoDB
 
-```python
 import json
 import boto3
 from boto3.dynamodb.conditions import Key
@@ -29,4 +28,3 @@ def lambda_handler(event, context):
             },
             'body': json.dumps({'error': str(e)})
         }
-```
