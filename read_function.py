@@ -1,4 +1,4 @@
-🟢 1️⃣ read_function.py – For Reading Data from DynamoDB
+# 🟢 1. read_function.py – For Reading Data from DynamoDB
 
 ```python
 import json
