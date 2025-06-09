@@ -60,7 +60,7 @@ This guide walks you through building the entire project from scratch using **AW
 
 > 📸 I’ve included 55+ screenshots inside the `/screenshots` folder to make every step crystal clear.
 
-### [] Step 1: Create DynamoDB Table
+### [ ] Step 1: Create DynamoDB Table
 
 * Go to DynamoDB in AWS Console → Create table
 * Table name: `HighAvailabilityTable`
