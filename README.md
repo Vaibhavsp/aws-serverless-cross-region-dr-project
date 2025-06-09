@@ -192,6 +192,6 @@ All 55+ screenshots are available in `/screenshots` and linked in steps above.
 
 ## 🙌 Author & Credits
 
-Project by **Vaibhav**
-Built with guidance from ChatGPT
-Thanks to the AWS community & docs
+* Project by **Vaibhav Parekh**
+* Built with guidance from ChatGPT
+* Thanks to the AWS community & docs
